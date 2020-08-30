@@ -42,7 +42,7 @@
                         <div class="col-10 offset-1">
                             <div class="form-group">
                                 <label for="">Login</label>
-                                <input required type="text" id="login" class="form-control" maxlength="46">
+                                <input required type="text" id="login" class="form-control parseLower" maxlength="46">
                             </div>
                             <div class="form-group">
                                 <label for="">Senha</label>

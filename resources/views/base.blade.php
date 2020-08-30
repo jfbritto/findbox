@@ -50,6 +50,22 @@
         
         </div>        
 
+        <footer class="bg-black small text-center text-white-50" style="padding: 10px">
+            <div class="container">
+                <div class="social d-flex justify-content-center">
+                    <a target="_blank" href="https://www.instagram.com/bianchijf/" class="mx-2">
+                        <i style="color: #fff; width: 30px" class="fab fa-instagram"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jo%C3%A3o-filipi-britto-a7375a103/" class="mx-2">
+                        <i style="color: #fff; width: 30px" class="fab fa-linkedin"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/jfbritto" class="mx-2">
+                        <i style="color: #fff; width: 30px" class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
         <script src="/js/jquery-3.5.1.min.js" ></script>
         <script src="/js/bootstrap.bundle.min.js" ></script>
         <script src="/js/sweetalert.js"></script>

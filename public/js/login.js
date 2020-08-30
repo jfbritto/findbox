@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+    $(".parseLower").on("keyup", function(){
+        $(this).val($(this).val().toLowerCase())
+    })
+
     $("#formAutenticar").on("submit", function(e){
         e.preventDefault();
 

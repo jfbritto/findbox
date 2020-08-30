@@ -214,6 +214,8 @@ $(document).ready(function(){
 
                             if(data.data.length == 500){
                                 $(".totalText").html(`Mais de ${data.data.length} resultados encontrados.`)
+                            }else if(data.data.length == 1){
+                                $(".totalText").html(`${data.data.length} resultado encontrado.`)
                             }else{
                                 $(".totalText").html(`${data.data.length} resultados encontrados.`)
                             }
