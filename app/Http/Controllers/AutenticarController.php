@@ -19,20 +19,30 @@ class AutenticarController extends Controller
             'senha' => 'required',
             ]);
 
-        $response = true;
+        if($request->login == 'gerente' && $request->senha == 'gerentecaixa'){
 
-        if($response){
-            session(['login' => 'britto']);
-            session(['nome' => 'João FIlipi']);
+            session(['login' => 'gerencia']);
+            session(['nome' => 'Gerente']);
+            session(['nivel' => '1']);
             session(['id' => '1']);
-            // session(['login' => $response->data->login]);
-            // session(['nome' => $response->data->nome]);
-            // session(['id' => $response->data->id]);
-
+    
             return response()->json(['status' => true]);
+            
+        }else if($request->login == 'tecnico' && $request->senha == 'tecnico123'){
+
+            session(['login' => 'tecnico']);
+            session(['nome' => 'Tecnico']);
+            session(['nivel' => '2']);
+            session(['id' => '2']);
+    
+            return response()->json(['status' => true]);
+
         }
-        
-        return response()->json(['status' => false, 'mensagem' => 'Erro ao logar']);
+
+
+            
+
+        return response()->json(['status' => false, 'mensagem' => 'Usuário ou senha incorretos']);
 
     }
 

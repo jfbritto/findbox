@@ -34,9 +34,9 @@ class BoxController extends Controller
     public function editBox(Request $request)
     {
         $data = [
-            'numero' => $request->numero,
-            'latitude' => $request->latitude,
-            'longitude' => $request->longitude,
+            'numero' => trim($request->numero),
+            'latitude' => trim($request->latitude),
+            'longitude' => trim($request->longitude),
             'id' => $request->id
         ];
 
@@ -51,9 +51,9 @@ class BoxController extends Controller
     public function addBox(Request $request)
     {
         $data = [
-            'numero' => $request->numero,
-            'latitude' => $request->latitude,
-            'longitude' => $request->longitude
+            'numero' => trim($request->numero),
+            'latitude' => trim($request->latitude),
+            'longitude' => trim($request->longitude)
         ];
 
         $response = $this->boxService->addBox($data);
@@ -78,33 +78,4 @@ class BoxController extends Controller
         return response()->json(['status'=>'error', 'message'=>$response['data']], 201);
     }
 
-    public function create()
-    {
-        //
-    }
-
-    public function store(Request $request)
-    {
-        //
-    }
-
-    public function show($id)
-    {
-        //
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -8,18 +8,20 @@
 
         <title>Find Box</title>
 
-        <meta name="theme-color" content="#1a294a">
+        <meta name="theme-color" content="#1bb0be">
 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <meta name=”keywords” content="" />
-        <!-- <meta property="og:url" content="http://relatorios.micron.com.br/" /> -->
+        <meta name=”keywords” content="CAIXA, FINDBOX, FIND BOX, CTO" />
+        <meta property="og:url" content="http://findbox.jfbritto.com.br/" />
         <meta property="type" content="website" />
         <meta property="og:title" content="FIND BOX">
         <meta property="og:description" content="Encontre a caixa">
-        <meta property="og:image" content="img/logo.png">
+        <meta property="og:image" content="{{asset("img/logo.png")}}">
         <meta property="og:locale" content="pt_BR">
-        <meta property="og:image:type" content="img/ico.png">
+        <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="640">
         <meta property="og:image:height" content="480">
 
@@ -30,12 +32,12 @@
     </head>
     <body class="h-100" style="background-color: #1bb0be !important;">
 
-        <div class="container-fluid h-100" style="padding-top: 100px">
+        <div class="container-fluid h-100" style="padding-top: 50px">
             <div class="row h-100 mx-1">
                 <div class="col-12 col-sm-4 offset-sm-4 bg-white my-auto rounded pt-3">
                     <form id="formAutenticar">
                         <div align="center" class="form-group">
-                            <img id="animate" class="img-fluid" src="img/logo.png" alt="">
+                            <img id="animate" class="img-fluid" src="img/logo.png" alt="" style="padding: 5px 20px 5px 30px;">
                         </div>
                         <div class="col-10 offset-1">
                             <div class="form-group">

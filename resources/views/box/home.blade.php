@@ -4,7 +4,7 @@
 
 <div class="card mb-3">
     <div class="card-header">
-        Encontre a caixa <a class="addBox" href="#"><i class="fas fa-plus-circle" style="color:#f39322"></i></a>
+        Encontre a caixa
     </div>
     <div class="card-body">
         <form action="POST" id="formSearchBox">
@@ -18,8 +18,10 @@
     </div>
 </div>
 
+<input type="hidden" id="nivel" value="{{ Session::get('nivel')}}">
+
 <div class="card mb-3 totalBox" style="display: none;">
-    <div class="card-body">
+    <div class="card-body" style="padding: 0.5rem;">
         <p class="totalText" style="margin: 0 !important;"></p>
     </div>
 </div>
