@@ -20,6 +20,9 @@ Route::group(['middleware' => ['autenticar']], function(){
     Route::post('/add-box', 'BoxController@addBox');
     Route::post('/delete-box', 'BoxController@deleteBox');
 
+    Route::get('/exp', 'BoxController@exp');
+    Route::post('/table-exp', 'BoxController@tableExp');
+
     //instalações abertas
     // Route::get('/instalacoes-abertas', 'BoxController@instalacoes_abertas_tela');
     // Route::post('/instalacoes-abertas', 'BoxController@instalacoes_abertas');

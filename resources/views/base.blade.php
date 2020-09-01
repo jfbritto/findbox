@@ -34,6 +34,7 @@
             @if(Session::get('nivel') == 1)
             <!-- <a class="addBox" href="#"><i class="fas fa-plus-circle" style="color:#f39322"></i></a> -->
             <a class="nav-link addBox" href="#" style="color:#f39322">Cadastrar Caixa</a>
+            <a class="nav-link" href="/exp" style="color:#f39322">Exportar Caixas</a>
             @endif
 
             <a class="nav-link" href="#" id="sair" style="color:#f39322">Sair </a>

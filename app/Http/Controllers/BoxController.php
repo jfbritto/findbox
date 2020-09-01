@@ -19,11 +19,26 @@ class BoxController extends Controller
         return view('box.home');
     }
 
+    public function exp()
+    {
+        return view('box.lista_export');
+    }
+
     public function searchBox()
     {
         $box = $_POST['box'];
 
         $response = $this->boxService->index($box);
+
+        if($response['status'] == 'success')
+            return response()->json(['status'=>'success', 'data'=>$response['data']], 201);
+            
+        return response()->json(['status'=>'error', 'message'=>$response['data']], 500);
+    }
+
+    public function tableExp()
+    {
+        $response = $this->boxService->tableExp();
 
         if($response['status'] == 'success')
             return response()->json(['status'=>'success', 'data'=>$response['data']], 201);

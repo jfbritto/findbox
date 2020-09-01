@@ -24,6 +24,22 @@ class BoxService
         return $response;
     }
 
+    public function tableExp()
+    {
+        $response = [];
+
+        try{
+
+            $boxes = DB::select( DB::raw("select * from boxes order by numero"));
+
+            $response = ['status' => 'success', 'data' => $boxes];
+        }catch(Exception $e){
+            $response = ['status' => 'error', 'data' => $e->getMessage()];
+        }
+
+        return $response;
+    }
+
     public function editBox(array $data)
     {
         $response = [];
