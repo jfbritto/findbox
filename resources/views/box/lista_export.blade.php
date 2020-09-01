@@ -6,7 +6,7 @@
 
 <div class="card mb-3" id="box-box" style="display: none;">
     <div class="card-header text-center">
-        <a title="Exportar caixas" id="csv_origem" download="caixas{{ 'now'|date('_d_m_Y_H_i_s') }}.xls" href="#" onclick="return ExcellentExport.excel(this, 'tabela', 'Sheet Name Here');" class="btn btn-success"><i class="fas fa-file-excel"></i> <span id="txtcx">Exportar</span> <i class="fas fa-file-excel"></i></a>
+        <a title="Exportar caixas" id="csv_origem" download="caixas.xls" href="#" onclick="return ExcellentExport.excel(this, 'tabela', 'Sheet Name Here');" class="btn btn-success"><i class="fas fa-file-excel"></i> <span id="txtcx">Exportar</span> <i class="fas fa-file-excel"></i></a>
     </div>
     <div class="card-body">
         
