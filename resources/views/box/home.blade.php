@@ -113,7 +113,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="numBox">Nº caixa</span>
                         </div>
-                        <input required id="numeroAdd" type="text" class="form-control parseUpper" aria-label="Sizing example input" aria-describedby="numBox">
+                        <input required id="numeroAdd" placeholder="Informe somente o nº" type="text" class="form-control parseUpper" aria-label="Sizing example input" aria-describedby="numBox">
                     </div>
 
                     <div class="input-group mb-3">
