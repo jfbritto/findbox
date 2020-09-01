@@ -17,6 +17,7 @@ $(document).ready(function(){
 
                         $("#table_exp").html("");
                         $("#txtcx").html(`Exportar ${data.data.length} resultados`);
+                        $("#box-box").show();
 
                         if(data.data.length > 0){
 
