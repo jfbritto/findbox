@@ -92,6 +92,8 @@ $(document).ready(function(){
             onOpen: () => {
                 Swal.showLoading();
                 $.post(window.location.origin + "/add-box", {
+                    tipo : $("#tipoAdd").val(),
+                    sigla : $("#siglaAdd").val(),
                     numero : $("#numeroAdd").val(),
                     latitude : $("#latitudeAdd").val(),
                     longitude : $("#longitudeAdd").val()

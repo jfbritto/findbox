@@ -50,8 +50,11 @@ class BoxController extends Controller
 
     public function addBox(Request $request)
     {
+
+        $num = trim($request->tipo)." ".trim($request->sigla)." ".str_pad(trim($request->numero), 4, '0', STR_PAD_LEFT);
+
         $data = [
-            'numero' => trim($request->numero),
+            'numero' => $num,
             'latitude' => trim($request->latitude),
             'longitude' => trim($request->longitude)
         ];

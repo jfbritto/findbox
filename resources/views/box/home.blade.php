@@ -91,6 +91,26 @@
                 <form action="POST" id="formAddBox">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
+                            <span class="input-group-text" id="numBox">Tipo</span>
+                        </div>
+                        <select required class="form-control" id="tipoAdd">
+                            <option value="">Selecione</option>
+                            <option value="CC">CC</option>
+                            <option value="CI">CI</option>
+                            <option value="CA">CA</option>
+                            <option value="CB">CB</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="numBox">Sigla</span>
+                        </div>
+                        <input required id="siglaAdd" maxlength="3" placeholder="Ex: VVA" type="text" class="form-control parseUpper" aria-label="Sizing example input" aria-describedby="numBox">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
                             <span class="input-group-text" id="numBox">Nº caixa</span>
                         </div>
                         <input required id="numeroAdd" type="text" class="form-control parseUpper" aria-label="Sizing example input" aria-describedby="numBox">
