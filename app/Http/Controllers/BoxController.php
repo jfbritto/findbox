@@ -14,16 +14,19 @@ class BoxController extends Controller
         $this->boxService = $boxService;
     }
 
+    //exibir tela de busca
     public function index()
     {
         return view('box.home');
     }
 
+    //exibir tela de baixar excel
     public function exp()
     {
         return view('box.lista_export');
     }
 
+    //buscar caixas
     public function searchBox()
     {
         $box = $_POST['box'];
@@ -36,6 +39,7 @@ class BoxController extends Controller
         return response()->json(['status'=>'error', 'message'=>$response['data']], 500);
     }
 
+    //buscar todas as caixas cadastradas
     public function tableExp()
     {
         $response = $this->boxService->tableExp();
@@ -46,6 +50,7 @@ class BoxController extends Controller
         return response()->json(['status'=>'error', 'message'=>$response['data']], 500);
     }
 
+    //editar caixa
     public function editBox(Request $request)
     {
         $data = [
@@ -63,6 +68,7 @@ class BoxController extends Controller
         return response()->json(['status'=>'error', 'message'=>$response['data']], 201);
     }
 
+    //cadastrar caixa
     public function addBox(Request $request)
     {
 
@@ -82,6 +88,7 @@ class BoxController extends Controller
         return response()->json(['status'=>'error', 'message'=>$response['data']], 201);
     }
 
+    //deletar caixa
     public function deleteBox(Request $request)
     {
         $data = [

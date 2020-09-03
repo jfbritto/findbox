@@ -19,6 +19,16 @@ $(document).ready(function(){
         $("#editBoxModal").modal("show");
     });
 
+    $(".lista-box").on("click", ".addLog", function(){
+
+        console.log("id: "+$(this).data("id")+" e nivel:"+$("#nivel").val());
+
+        $.post(window.location.origin + "/add-log", {
+            id_caixa : $(this).data("id"),
+            id_usuario : $("#nivel").val(),
+        });
+    });
+
     $(".addBox").on("click", function(){
 
         $("#numeroAdd").val("");
@@ -245,7 +255,7 @@ $(document).ready(function(){
                                                     </a>
                                                 `:``}
                                             
-                                                <a class="btn btn-warning" style="background-color:#f49424" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${data.data[i].latitude},${data.data[i].longitude}">
+                                                <a class="btn btn-warning addLog" data-id="${data.data[i].id}" style="background-color:#f49424" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${data.data[i].latitude},${data.data[i].longitude}">
                                                     <i class="fas fa-map-marker-alt" style="color:#fff"></i>
                                                 </a>
                                             </span>
