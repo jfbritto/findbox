@@ -24,5 +24,7 @@ Route::group(['middleware' => ['autenticar']], function(){
     Route::post('/table-exp', 'BoxController@tableExp');
     
     Route::post('/add-log', 'LogUserController@addLog');
+    Route::get('/logs', 'LogUserController@logs_tela');
+    Route::post('/logs-results', 'LogUserController@relatorioLog');
     
 });

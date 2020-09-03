@@ -14,6 +14,22 @@ class LogUserController extends Controller
         $this->logUserService = $logUserService;
     }
 
+    //exibir tela de log
+    public function logs_tela()
+    {
+        return view('box.log_results');
+    }
+
+    public function relatorioLog()
+    {
+        $response = $this->logUserService->relatorioLog();
+
+        if($response['status'] == 'success')
+            return response()->json(['status'=>'success', 'data'=>$response['data']], 201);
+            
+        return response()->json(['status'=>'error', 'message'=>$response['data']], 500);
+    }
+
     public function addLog(Request $request)
     {
 

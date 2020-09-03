@@ -8,21 +8,30 @@ use Exception;
 
 class LogUserService
 {
-    // public function index($box)
-    // {
-    //     $response = [];
+    public function relatorioLog()
+    {
+        $response = [];
 
-    //     try{
+        try{
 
-    //         $boxes = DB::select( DB::raw("select * from boxes where numero like '%".$box."%' order by numero limit 500"));
+            $boxes = DB::select( DB::raw("SELECT 
+                                            sum(id_usuario = '1') as gerente,
+                                            sum(id_usuario = '2') as tecnico,
+                                            concat(extract(day from datahora), '/', extract(month from datahora), '/', extract(year from datahora)) as dia
+                                        FROM 
+                                            log_users
+                                        group by	
+                                            dia
+                                        order by
+                                            datahora desc"));
 
-    //         $response = ['status' => 'success', 'data' => $boxes];
-    //     }catch(Exception $e){
-    //         $response = ['status' => 'error', 'data' => $e->getMessage()];
-    //     }
+            $response = ['status' => 'success', 'data' => $boxes];
+        }catch(Exception $e){
+            $response = ['status' => 'error', 'data' => $e->getMessage()];
+        }
 
-    //     return $response;
-    // }
+        return $response;
+    }
 
     public function addLog(array $data)
     {
