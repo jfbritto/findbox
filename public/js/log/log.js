@@ -21,8 +21,8 @@ $(document).ready(function(){
 
                                 $("#table_log").append(`
                                     <tr>
-                                        <td>${data.data[i].gerente}</td>
                                         <td>${data.data[i].tecnico}</td>
+                                        <td>${data.data[i].gerente}</td>
                                         <td>${data.data[i].dia}</td>
                                     </tr>
 
