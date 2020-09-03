@@ -34,7 +34,7 @@ $(document).ready(function(){
 
                             $("#table_log").append(`
                                 <tr>
-                                    <td colspan="3">Nenhuma log encontrado</td>
+                                    <td colspan="3">Nenhum log encontrado</td>
                                 </tr>
 
                             `);
