@@ -9,6 +9,11 @@ Route::post('/', 'AutenticarController@post_autenticar');
 
 Route::post('/deslogar', 'AutenticarController@deslogar');
 
+//logs
+Route::post('/add-log', 'LogUserController@addLog');
+Route::get('/logs', 'LogUserController@logs_tela');
+Route::post('/logs-results', 'LogUserController@relatorioLog');
+
 
 Route::group(['middleware' => ['autenticar']], function(){
 
@@ -22,9 +27,5 @@ Route::group(['middleware' => ['autenticar']], function(){
     
     Route::get('/exp', 'BoxController@exp');
     Route::post('/table-exp', 'BoxController@tableExp');
-    
-    Route::post('/add-log', 'LogUserController@addLog');
-    Route::get('/logs', 'LogUserController@logs_tela');
-    Route::post('/logs-results', 'LogUserController@relatorioLog');
     
 });
