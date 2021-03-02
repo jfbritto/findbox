@@ -34,8 +34,10 @@ class AutenticarController extends Controller
             session(['nome' => 'Tecnico']);
             session(['nivel' => '2']);
             session(['id' => '2']);
+
+            return response()->json(['status' => false, 'mensagem' => 'Usuário não autorizado']);
     
-            return response()->json(['status' => true]);
+            // return response()->json(['status' => true]);
 
         }
 
