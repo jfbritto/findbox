@@ -32,7 +32,7 @@
     </head>
     <body class="h-100" style="background-color: #1bb0be !important;">
 
-        <div class="container-fluid h-100" style="padding-top: 50px">
+        <!-- <div class="container-fluid h-100" style="padding-top: 50px">
             <div class="row h-100 mx-1">
                 <div class="col-12 col-sm-4 offset-sm-4 bg-white my-auto rounded pt-3">
                     <form id="formAutenticar">
@@ -55,12 +55,12 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!-- <center style="margin-top: 10px; color: white; padding: 10px; font-weight: bold">
+        <center style="margin-top: 10px; color: white; padding: 10px; font-weight: bold">
             <p>SERVIÇO INATIVADO.</p>
             <p>Contacte o gerente do setor para mais informações.</p>
-        </center> -->
+        </center>
 
         <script src="/js/jquery-3.5.1.min.js" ></script>
         <script src="/js/bootstrap.min.js" ></script>
